@@ -79,11 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Roles y Permisos
+                    Analisis de Riesgos
                 </div>
 
                 <div class="links">
-                    <a href="https://rimorsoft.com/">Rimorsoft Online</a>
+                    <!--<a href="https://rimorsoft.com/">Rimorsoft Online</a>-->
                 </div>
             </div>
         </div>

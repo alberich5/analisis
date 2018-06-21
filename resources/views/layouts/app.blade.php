@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'SIAR') }}
                     </a>
                 </div>
 
@@ -47,7 +47,7 @@
                         </li>
                         @endcan
                         @can('roles.index')
-                        <li class="nav-item">                            
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
                         </li>
                         @endcan
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </nav>
-        
+
         @if (session('info'))
         <div class="container">
             <div class="row">
