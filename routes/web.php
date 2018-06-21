@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Grupo que engloba la restricion de login
 Route::middleware(['auth'])->group(function () {
 	//Roles
 	Route::post('roles/store', 'RoleController@store')->name('roles.store')

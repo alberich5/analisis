@@ -8,7 +8,7 @@
                 <div class="panel-heading">
                     Productos
                     @can('products.create')
-                    <a href="{{ route('products.create') }}" 
+                    <a href="{{ route('products.create') }}"
                     class="btn btn-sm btn-primary pull-right">
                         Crear
                     </a>
@@ -31,7 +31,7 @@
                                 <td>{{ $product->name }}</td>
                                 @can('products.show')
                                 <td width="10px">
-                                    <a href="{{ route('products.show', $product->id) }}" 
+                                    <a href="{{ route('products.show', $product->id) }}"
                                     class="btn btn-sm btn-default">
                                         ver
                                     </a>
@@ -39,7 +39,7 @@
                                 @endcan
                                 @can('products.edit')
                                 <td width="10px">
-                                    <a href="{{ route('products.edit', $product->id) }}" 
+                                    <a href="{{ route('products.edit', $product->id) }}"
                                     class="btn btn-sm btn-default">
                                         editar
                                     </a>

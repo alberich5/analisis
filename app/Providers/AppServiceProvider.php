@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      //logitud de los campos unicos
         Schema::defaultStringLength(120);
     }
 
