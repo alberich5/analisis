@@ -78,4 +78,6 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit')
 		->middleware('permission:products.edit');
+
+  
 });
