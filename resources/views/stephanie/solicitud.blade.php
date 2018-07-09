@@ -10,7 +10,7 @@
     <form action="" method="post" enctype="text/plain">
         <fieldset><legend>SOLICITUD PARA ANALISIS DE RIESGOS</legend>
           <p><input type="text" v-model="bienvenida"  placeholder="Buenas tardes Subofil. Nombre apellidos"></p>
-          <p>Por este medio y en atención ala peticion del: <input type="text" name="nombre" size="40" maxlength="80" placeholder="nombre del representante y cargo" v-model="nomrepresentante">;de contractar el servicio de seguridad de vigilancia que promociona la PABIC, solicito su valioso apoyo para realizacion del Analisis de Riesgos en el inmueble ubicacdo en <input type="text" name="nombre" size="40" maxlength="80" placeholder="Ubicacion calle y numero" v-model="direccion">, el cual fue agendado para el dia <input type="date"  v-model="fecha_programada"> en un horario de:
+          <p>Por este medio y en atención ala peticion del: <input type="text" name="nombre" placeholder="nombre del representante y cargo" v-model="nomrepresentante">;de contractar el servicio de seguridad de vigilancia que promociona la PABIC, solicito su valioso apoyo para realizacion del Analisis de Riesgos en el inmueble ubicacdo en <input type="text" name="nombre" size="40" maxlength="80" placeholder="Ubicacion calle y numero" v-model="direccion">, el cual fue agendado para el dia <input type="date"  v-model="fecha_programada"> en un horario de:
              <input type="time"  v-model="hora_programada">
         </p>
             <p>Lo anterior, para asu atención y medidas pertinentes.</p>
@@ -27,6 +27,7 @@
 
   <!--div para mostrar el contenido-->
   <div style="width: 45%;float: left;">
+    <p>@{{ bienvenida }}.</p>
     <p>@{{ textocompleto }}</p>
     <p v-if="statusenviar!=0"><input type="reset" value="Enviar" v-on:click="btnenviar()"></p>
   </div>
