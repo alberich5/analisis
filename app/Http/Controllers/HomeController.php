@@ -29,4 +29,8 @@ class HomeController extends Controller
     {
         return view('stephanie.solicitud');
     }
+    public function solicitudes()
+    {
+        return view('stephanie.solicitudes');
+    }
 }
