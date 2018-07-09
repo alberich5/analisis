@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/solicitud', 'HomeController@solicitud')->name('solicitud');
 
 //Grupo que engloba la restricion de login
 Route::middleware(['auth'])->group(function () {
@@ -79,5 +80,5 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit')
 		->middleware('permission:products.edit');
 
-  
+
 });

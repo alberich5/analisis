@@ -11,6 +11,10 @@
 
        <div class="row table-responsive ">
           <div class="col-sm-7 col-sm-offset-1 without-padding">
+                <div style="margin-left: 105%;margin-bottom: -50%;">
+                  <img src="{{ asset('img/foto.png') }}" >
+                </div>
+
 
             <table class="table">
                   <thead >

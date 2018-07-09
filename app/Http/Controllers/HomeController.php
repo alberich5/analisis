@@ -17,12 +17,16 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application dashboard.solicitud
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         return view('stephanie.index');
+    }
+    public function solicitud()
+    {
+        return view('stephanie.solicitud');
     }
 }
