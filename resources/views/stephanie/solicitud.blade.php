@@ -5,6 +5,7 @@
 @section('content')
 <!--div del contenedor-->
 <div class="container" id="app"  style="margin-left: 3%; width: 95%;">
+
   <!--div del formulario a capturar-->
   <div style="width: 55%;float: left;">
     <form action="" method="post" enctype="text/plain">
@@ -17,7 +18,6 @@
             <p>Sin Otro particular, agradeciendo su compresión y apoyo, envío un cordial saludo.</p>
             <p>Agradeceré confirme de recibido.</p>
       </p>
-
         <input type="hidden" name="datosformulario">
       </fieldset><br />
         <input type="reset" value="Enviar" v-on:click.prevent="enviar()">
@@ -41,6 +41,8 @@
        <pre>@{{$data}}</pre>
      </div>
    </div>
+
+  
    <!-- fin del div de data--->
 
 </div>
@@ -67,7 +69,8 @@ data: {
   texto5:'Sin Otro particular, agradeciendo su compresión y apoyo, envío un cordial saludo.',
   texto6:'Agradeceré confirme de recibido.',
   nomrepresentante: '',
-  totalCargado:'',
+  respuesta: '',
+  totalCargado:[],
   fecha_programada:'',
   hora_programada:'',
   direccion: '',
@@ -101,21 +104,23 @@ methods:{
                 }else{
                   //Aqui va a salir la funcion para enviar a la BD
                   alert("se envio correcta la informacion");
-                  
+
                   this.totalCargado.push({
                     "encargado_analisis": this.encargado_analisis,
                     "nombre_representante": this.nomrepresentante,
                     "direccion": this.direccion,
                     "fecha_programa": this.fecha_programada,
-                    "hora_programada": this.hora_programada
+                    "hora_programada": this.hora_programada,
+                    "fecha_solicitud": '2018-07-10'
                   });
+                  this.prueba();
+                  //this.guardarBD();
                   this.limpiar();
                 }
             }
           }
       }
     }
-  alert("se esta enviando la informacion");
   },
   limpiar:function(){
     this.encargado_analisis='';
@@ -124,7 +129,17 @@ methods:{
     this.fecha_programada='';
     this.hora_programada='';
   },
+  prueba:function(){
+    var urlGuardar = 'guardarBD';
+        axios.post(urlGuardar,{
+          variable:this.totalCargado
+        }).then(response => {
+         this.respuesta = response.data
+         $('#Ver').modal('show');
+      });
+  },
   guardarDB:function(){
+    alert("entro");
     var urlGuardar = 'guardarBD';
         axios.post(urlGuardar,{
           variable:this.totalCargado
