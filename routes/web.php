@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/solicitud', 'HomeController@solicitud')->name('solicitud');
 Route::get('/solicitudes', 'HomeController@solicitudes')->name('solicitudes');
 Route::post('guardarBD', 'HomeController@guardar');
+Route::get('mostrarsolicitudes', 'HomeController@mostrarsolicitudes');
 
 //Grupo que engloba la restricion de login
 Route::middleware(['auth'])->group(function () {

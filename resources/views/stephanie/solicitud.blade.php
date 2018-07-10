@@ -42,7 +42,7 @@
      </div>
    </div>
 
-  
+
    <!-- fin del div de data--->
 
 </div>
@@ -111,7 +111,9 @@ methods:{
                     "direccion": this.direccion,
                     "fecha_programa": this.fecha_programada,
                     "hora_programada": this.hora_programada,
-                    "fecha_solicitud": '2018-07-10'
+                    "fecha_solicitud": '2018-07-10',
+                    "cargo_representante":'Administrador',
+                    "nombre_empresa":'AVICOLA',
                   });
                   this.prueba();
                   //this.guardarBD();
