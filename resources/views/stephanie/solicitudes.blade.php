@@ -1,12 +1,12 @@
 @extends('stephanie.plantilla')
 @section('css')
-  <link href="{{ asset('css/materialize.css') }}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 @endsection
 @section('content')
 <!--div del contenedor-->
 <div class="container" id="app"  style="margin-left: 3%; width: 95%;">
   <!--div del formulario a capturar-->
+
 
   <center> <h3>Estas donde se listaran todas las solucitudes de servicios</h3></center>
 
@@ -36,7 +36,7 @@
         <td v-text="soli.direccion"></td>
         <td v-text="soli.fecha_programada"></td>
         <td v-text="soli.hora_programada"></td>
-        <td><i class="small material-icons" v-on:click="mostrar()">add_circle</i></td>
+        <td><button type="button" class="btn btn-secondary" v-on:click="mostrar()">ver</button> </td>
       </tr>
     </tbody>
   </table>
@@ -55,6 +55,7 @@
 <script src="{{ asset('js/materialize.js') }}"></script>
 <script type="text/javascript">
 
+
 var app = new Vue({
 el: '#app',
 created: function() {
@@ -72,7 +73,8 @@ methods:{
   });
 },
 mostrar:function(){
-  alert("funcion");
+ alert("mensaje");
+  $('#myModal').modal('show');
 }
 
 

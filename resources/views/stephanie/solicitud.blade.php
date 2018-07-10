@@ -11,7 +11,7 @@
     <form action="" method="post" enctype="text/plain">
         <fieldset><legend>SOLICITUD PARA ANALISIS DE RIESGOS</legend>
           <p><input type="text" v-model="encargado_analisis"  placeholder="Buenas tardes Subofil. Nombre apellidos"></p>
-          <p>Por este medio y en atención ala peticion del: <input type="text" name="nombre" placeholder="nombre del representante y cargo" v-model="nomrepresentante">;de contractar el servicio de seguridad de vigilancia que promociona la PABIC, solicito su valioso apoyo para realizacion del Analisis de Riesgos en el inmueble ubicacdo en <input type="text" name="nombre" size="40" maxlength="80" placeholder="Ubicacion calle y numero" v-model="direccion">, el cual fue agendado para el dia <input type="date"  v-model="fecha_programada"> en un horario de:
+          <p>Por este medio y en atención ala peticion del: <input type="text" name="nombre" placeholder="Nombre del representante" v-model="nomrepresentante"> <input type="text" name="nombre" placeholder="Cargo del representante" v-model="cargopresentante">;de contractar el servicio de seguridad de vigilancia que promociona la PABIC, solicito su valioso apoyo para realizacion del Analisis de Riesgos en el inmueble ubicacdo en <input type="text" name="nombre" size="40" maxlength="80" placeholder="Ubicacion calle y numero" v-model="direccion">, el cual fue agendado para el dia <input type="date"  v-model="fecha_programada"> en un horario de:
              <input type="time"  v-model="hora_programada">
         </p>
             <p>Lo anterior, para asu atención y medidas pertinentes.</p>
